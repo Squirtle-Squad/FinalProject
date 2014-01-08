@@ -14,8 +14,14 @@ The 2014 reboot of the classic Atari game, "Space Invaders".
 
 Additions:
 1. Superheroes and Villians
-  -Superman, Spiderman, Batman, 
+  -Superman, Spiderman, Batman, Green Arrow, and Firestar
+  -Lex Luther, Green Goblin, Joker, Black Archer, and Aftershock
+  -all of the superheroes has their general shooting ability but each has their own special ability
+  -each of the villains have their own special ability
 2. Levels and a Boss Level for each superhero
-3. Upgrades and Powerups (Hero Points)
+  -Hero Points are awarded after each boss level. These points could be used to give more abilities to the superheroes
+  -You received a final score for each level. 
+3. Upgrades and Powerups
   -after completion of each level, you may enter the upgrade shop to enchance your hero's skill level
+  -your score 
 4. 
