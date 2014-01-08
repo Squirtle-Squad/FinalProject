@@ -23,5 +23,5 @@ Additions:
   -You received a final score for each level. 
 3. Upgrades and Powerups
   -after completion of each level, you may enter the upgrade shop to enchance your hero's skill level
-  -your score 
+  -your score is used to buy general upgrades which are universal to each character
 4. 
