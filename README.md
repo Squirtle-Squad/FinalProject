@@ -38,7 +38,7 @@ Additions:
   
 Roles:
 
-| Programmer - Omar 
+Programmer - Omar 
 | QA Tester - Chris
 | UI Designer - John
 | Graphic Design - Tizzy
