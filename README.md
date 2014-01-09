@@ -6,7 +6,7 @@ Final Project
 Description: 
 
 After the year 1978, decades have passed since their last dreadful appearance.
-Now, the Aliens have returned with greater vengeance due to their last defeat.
+Now, the Aliens have come back from retirement with greater vengeance.
 Atari fans all over world have been waiting for this moment. 
 the intriguing (working adjective) game that has captured the hearts of many gamers
 is now avaible in Processing! 
