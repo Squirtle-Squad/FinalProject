@@ -38,9 +38,9 @@ Additions:
   
 Roles:
 
-Programmer - Omar 
-| QA Tester - Chris
-| UI Designer - John
+CodeMonkey/Programmer - Omar 
+| QA (Quality Assurance) Tester - Chris
+| UI (User Interface) Designer - John
 | Graphic Design - Tizzy
 | Project Manager - Ashley
 
