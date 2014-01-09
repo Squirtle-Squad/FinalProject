@@ -35,3 +35,12 @@ Additions:
 
   -after completion of each level, you may enter the upgrade shop to enchance your hero's skill level
   -your score is used to buy general upgrades which are universal to each character.
+  
+Roles:
+
+*Programmer - Omar 
+*QA Tester - Chris
+*UI Designer - John
+*Graphic Design - Tizzy
+*Project Manager - Ashley
+
