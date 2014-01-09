@@ -18,7 +18,6 @@ Additions:
 1. Superheroes and Villians
 
   -Superman, Spiderman, Batman, Green Arrow, and Firestar.
-  
   -Lex Luther, Green Goblin, Joker, Black Archer, and Aftershock.
   -all of the superheroes has their general shooting ability but each has their own special ability.
   -each of the villains have their own special ability.
