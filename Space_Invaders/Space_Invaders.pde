@@ -9,7 +9,6 @@ void setup() {
   for (int x = 0; x < cols; x++) {
     for (int y=0; y<rows;y++) {
       aliens.add(new Enemies(70*x, 70*y));
-      
     }
   }
   leftside=aliens.get(0).loc.x;
@@ -23,12 +22,14 @@ void draw() {
     Enemies a = aliens.get(i);
     a.display();
     a.move();
-    
   }
-  if (rightside>width||leftside<0) {
-      for(Enemies a: aliens){
-       a.vel.x*=-1; 
+  for (Enemies a: aliens) {
+    if (a.loc.x + 50 > width || a.loc.x < 0) {
+      for (Enemies all: aliens) {
+        all.vel.x = -all.vel.x;
       }
     }
+    
+  }
 }
 
