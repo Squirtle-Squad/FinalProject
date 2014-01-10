@@ -1,13 +1,18 @@
 class introScreen {
 
   //spiderman intro page
-  PVector vel, loc;
-  PImage spiderman, spidermanBackground;
+  PVector vel, velb, loc, locb;
+  PImage spiderman, spidermanBackground, batman, batmanbackground;
+
   introScreen() {
     loc = new PVector(500, -650);
+    locb = new PVector(-50, height-50);
     vel = new PVector(0, 5);
+    velb = new PVector(5, 0);
     spiderman = loadImage("spiderman.png");
     spidermanBackground = loadImage("brickbackground.jpg");
+    batman = loadImage("batman.png");
+    batmanbackground = loadImage("backgroundbatman.jpg");
   }
 
   void displayspiderman() {
@@ -21,6 +26,24 @@ class introScreen {
       vel = new PVector(0, 0);
     }
   }
-  
-}
+
+  //batman intro
+  void displaybatman() {
+    image(batmanbackground, -50, 0, 1200, height);
+    image(batman, locb.x, locb.y, 400, 400);
+    locb.add(velb);
+    if (locb.x == width/2) {
+      velb = new PVector(0, 0);
+    }
+
+
+    void displaysuperman() {
+    }
+
+    void displayfirestar() {
+    }
+
+    void displaygreenarrow() {
+    }
+  }
 
