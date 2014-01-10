@@ -1,8 +1,11 @@
 SuperheroGame
 =============
 
-Final Project
+Final Project 
 -------------
+Squirtle-Squad
+Period 1/2
+
 Description: 
 
 After the year 1978, decades have passed since their last dreadful appearance.
