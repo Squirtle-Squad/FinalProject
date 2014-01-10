@@ -1,9 +1,11 @@
 
-int state, startState, charState, gameState, levelState, endState;
+//int state, startState, charState, gameState, levelState, endState;
 Start s;
-void setup(){
-  size(displayWidth,displayHeight);
+CharScreen c;
+void setup() {
+  size(displayWidth, displayHeight);
   s = new Start();
+  c = new CharScreen();
 }
 
 void draw() {
@@ -12,11 +14,17 @@ void draw() {
   s.button();
   if (keyPressed) {
     if (keyCode=='c') {
-      state=charState;
+      // state=charState;
     }
   }
 }
 //everything else will be prompted by a button
-
-
+//if(state==charState){
+//  
+//}
+void mousePressed() {
+  if (dist(mouseX, mouseY, s.loc.x, s.loc.y) <= s.d/2) {
+    c.display();
+  }
+}
 
