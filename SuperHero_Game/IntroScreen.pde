@@ -1,4 +1,4 @@
-class introScreen {
+class IntroScreen {
 
   //spiderman intro page
   PVector vel, loc;
