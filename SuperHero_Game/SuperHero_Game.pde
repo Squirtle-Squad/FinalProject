@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 int state, startState, charState, gameState, levelState, endState;
 Start s;
 void setup(){
@@ -17,6 +17,6 @@ void draw() {
   }
 }
 //everything else will be prompted by a button
-=======
->>>>>>> origin/Superhero-Selection-Screen
+
+
 
