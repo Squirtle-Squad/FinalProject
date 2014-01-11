@@ -36,7 +36,7 @@ Additions:
 
 4. Upgrades and Powerups
 
-  -after completion of each level, you may enter the upgrade shop to enchance your hero's skill level
+  -after completion of each level, you may enter the upgrade shop to enchance your hero's skill
   -your score is used to buy general upgrades which are universal to each character.
   
 Roles:
