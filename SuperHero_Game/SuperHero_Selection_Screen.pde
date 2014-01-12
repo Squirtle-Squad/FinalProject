@@ -37,13 +37,14 @@ class introScreen {
     }
 
 
-    void displaysuperman() {
-    }
-
-    void displayfirestar() {
-    }
-
-    void displaygreenarrow() {
-    }
+    //    void displaysuperman() {
+    //    }
+    //
+    //    void displayfirestar() {
+    //    }
+    //
+    //    void displaygreenarrow() {
+    //    }
   }
+}
 
