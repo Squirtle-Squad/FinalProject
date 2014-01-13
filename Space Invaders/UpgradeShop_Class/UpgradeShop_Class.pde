@@ -1,12 +1,16 @@
 class upgradeShop{ 
   PImage marvelBG;
-  PVector exitLoc;
-  int d;
+  PVector exitLoc,speedLoc,reloadLoc,livesLoc,cooldownLoc,abilityLoc;
+  int d,s;
   
   upgradeShop(){
     marvelBG = loadImage("MarvelComic.jpg");
     exitLoc = new PVector(width-60,height-60);
+    speedLoc = new PVector(width/7,height/3.5);
+    reloadLoc = new PVector(width/7,height/2.3);
+    livesLoc = new PVector(width/7, height/1.715);
     d = 70;
+    s = 100;
   }
   
   void displayShop(){
@@ -23,13 +27,25 @@ class upgradeShop{
     textSize(70);
     textAlign(CENTER);
     fill(0,75);
-    text("UpgradeShop",width/2,height/7.5-5);
+    text("UpgradeShop",width/2,height/7.5+5);
     fill(360,150);
     text("UpgradeShop",width/2+5,height/7.5);
     popMatrix();
   }
   
   void displayUpgrades(){
+    pushMatrix();
+    strokeWeight(3);
+    rectMode(CORNER);
+    textSize(20);
+    textAlign(CORNER);
+    fill(360,200);
+    rect(speedLoc.x,speedLoc.y,s,s);
+    text("SPEED",width/3,height/3.2);
+    rect(reloadLoc.x,reloadLoc.y,s,s);
+    text("RELOAD TIME",width/3,height/2.3);
+    rect(livesLoc.x,livesLoc.y,s,s);
+    popMatrix();
   }
   
   void exitButton(){
