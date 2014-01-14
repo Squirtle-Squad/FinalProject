@@ -7,7 +7,7 @@ class CharScreen {
     d=50;
   }
   void display(int y) {
-    background(100);
+    fill(30, 240, 240);
     ellipse(loc.x, y, d, d);
   }
 }
