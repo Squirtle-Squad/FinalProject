@@ -9,8 +9,7 @@ class Enemies {
     size = 50;
   }
   void display() {
-
-
+    fill(255,0,0);
     rect(loc.x, loc.y, size, size);
   }
   void move() {

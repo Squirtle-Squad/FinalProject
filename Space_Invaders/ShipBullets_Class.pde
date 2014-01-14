@@ -1,4 +1,4 @@
-class ShipBullet{
+/*class ShipBullet{
  PVector loc;
   PVector vel;
   int d;
@@ -13,4 +13,4 @@ class ShipBullet{
   void shoot(){
    loc.add(vel);
   } 
-}
+}*/
