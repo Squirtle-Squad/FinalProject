@@ -3,7 +3,8 @@ class IntroScreen {
   //spiderman intro page
   PVector vel, loc;
   PImage spiderman, spidermanBackground;
-  introScreen() {
+
+  IntroScreen() {
     loc = new PVector(500, -650);
     vel = new PVector(0, 5);
     spiderman = loadImage("spiderman.png");
@@ -21,6 +22,5 @@ class IntroScreen {
       vel = new PVector(0, 0);
     }
   }
-  
 }
 

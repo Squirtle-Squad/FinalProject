@@ -42,23 +42,29 @@ void displaybatman() {
   if (locb.x == width/2) {
     velb = new PVector(0, 0);
   }
-
-  //superman intro
-  void displaysuperman() {
-    image(supermanbackground, 0, 0, width, height);
-    image(superman, width/2, loc.y, 500, 500);
-    loc.add(vel);
-    if (loc.y == 350) {
-      vel = new PVector(0, 0);
-    }
+}
+//superman intro
+void displaysuperman() {
+  image(supermanbackground, 0, 0, width, height);
+  image(superman, width/2, loc.y, 500, 500);
+  loc.add(vel);
+  if (loc.y == 350) {
+    vel = new PVector(0, 0);
   }
+}
 
-  //greenarrow intro
-  void displaygreenarrow() {
-  //need to add the code here!!!  
+//greenarrow intro
+void displaygreenarrow() {
+  image(greenarrowbackground, 0, 0, width, height);
+  image(greenarrow, locg.x, locg.y, sx, sy);
+  sx++;
+  sy++;
+  if (sx >= 300 && sy >= 450) {
+    sx = 300;
+    sy = 450;
   }
+}
 
-  void displayfirestar() {
-  }
+void displayfirestar() {
 }
 
