@@ -1,22 +1,9 @@
-
-int state, startState, charState, gameState, levelState, endState;
-Start s;
-void setup(){
-  size(displayWidth,displayHeight);
-  s = new Start();
-}
-
-void draw() {
-  background(0);
-  s.display();
-  s.button();
-  if (keyPressed) {
-    if (keyCode=='c') {
-      state=charState;
-    }
-  }
-}
-//everything else will be prompted by a button
-
-
+//introScreen screen;
+//
+//void setup() {
+//  size(1050, 800);
+//}
+//void draw() {
+//  screen.displayspiderman();
+//}
 
