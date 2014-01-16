@@ -3,10 +3,11 @@ int cols = 5;
 int currentTime=0;
 int oldTime=0;
 int rand;
+boolean shipgun;
 ArrayList<Enemies> aliens = new ArrayList<Enemies>();
 ArrayList<EnemyBullets> ebullets=new ArrayList<EnemyBullets>();
+ArrayList<ShipBullets> sbullets=new ArrayList<ShipBullets>();
 Ship S;
-ShipBullets sbullets;
 void setup() {
   size(700, 700);
   int(random(aliens.size()));
@@ -17,7 +18,10 @@ void setup() {
   }
 
   S=new Ship(width/2, height-50);
-  sbullets=new ShipBullets(S.loc.x, S.loc.y);
+  for(int i=0;i<sbullets.size();){
+    sbullets.add(new ShipBullets(S.loc.x,S.loc.y));
+   } 
+  
 }
 
 void draw() {
@@ -26,8 +30,15 @@ void draw() {
 
   S.display();
   S.move();
-
-
+  for(int i=0; i<sbullets.size(); i++){
+    if(keyPressed){
+     if(key==' '){
+  ShipBullets s= sbullets.get(i);
+  s.display();
+  s.shoot();
+    }
+  }
+  }
   for (int i=0; i<aliens.size();i++) {
     Enemies a = aliens.get(i);
     a.display();
@@ -57,12 +68,6 @@ void draw() {
         all.vel.x = -all.vel.x;
       }
     }
-  }
-}
-void keyReleased() {
-  if (key== ' ' ) {
-    sbullets.display();
-    sbullets.shoot();
   }
 }
 
