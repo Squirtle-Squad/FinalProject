@@ -6,6 +6,6 @@ void setup() {
 }
 
 void draw() {
-  intro.displayhawkgirl();
+  intro.displayspiderman();
 }
 
