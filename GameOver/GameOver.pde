@@ -6,8 +6,8 @@ void setup(){
 }
 
 void draw(){
-  lives = 1;
-  enemies = 0;
+  lives = 0;
+  enemies = 1;
   Go.display();
   
   
