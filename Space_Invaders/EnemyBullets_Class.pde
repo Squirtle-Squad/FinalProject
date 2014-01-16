@@ -4,7 +4,7 @@ class EnemyBullets {
   int d;
   EnemyBullets(float x, float y){
    loc=new PVector(x,y);
-  vel=new PVector(0,-1); 
+  vel=new PVector(0,1); 
   d= 20;
   }
   void display(){
