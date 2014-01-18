@@ -11,6 +11,10 @@ class ShipBullets{
    ellipse(loc.x,loc.y,d,d); 
   }
   void shoot(){
+    if(keyPressed){
+     if (key=' '){ 
    loc.add(vel);
+     }
+    }
   } 
 }
