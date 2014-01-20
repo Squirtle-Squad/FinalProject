@@ -18,10 +18,9 @@ void setup() {
   }
 
   S=new Ship(width/2, height-50);
-  for(int i=0;i<sbullets.size();){
-    sbullets.add(new ShipBullets(S.loc.x,S.loc.y));
-   } 
-  
+  for (int i=0;i<sbullets.size();) {
+    sbullets.add(new ShipBullets(S.loc.x, S.loc.y));
+  }
 }
 
 void draw() {
@@ -30,14 +29,14 @@ void draw() {
 
   S.display();
   S.move();
-  for(int i=0; i<sbullets.size(); i++){
-    if(keyPressed){
-     if(key==' '){
-  ShipBullets s= sbullets.get(i);
-  s.display();
-  s.shoot();
+  for (int i=0; i<sbullets.size(); i++) {
+    if (keyPressed) {
+      if (key==' ') {
+        ShipBullets s= sbullets.get(i);
+        s.display();
+        s.shoot();
+      }
     }
-  }
   }
   for (int i=0; i<aliens.size();i++) {
     Enemies a = aliens.get(i);
