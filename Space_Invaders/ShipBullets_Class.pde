@@ -12,9 +12,9 @@ class ShipBullets{
   }
   void shoot(){
     if(keyPressed){
-     if (key=' '){ 
+    // if (key=' '){ 
    loc.add(vel);
      }
     }
   } 
-}
+//}
