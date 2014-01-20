@@ -1,16 +1,12 @@
 
-boolean startState, charState, introState1, introState2, introState3, introState4, introState5, gameState, levelState, endState;
+boolean startState, charState, spiState, batState, superState, greenState, hawkState, gameState, levelState, endState;
 Start s;
 CharScreen c1;
 CharScreen c2;
 CharScreen c3;
 CharScreen c4;
 CharScreen c5;
-IntroScreen I1;
-IntroScreen I2;
-IntroScreen I3;
-IntroScreen I4;
-IntroScreen I5;
+IntroScreen i;
 void setup() {
   size(displayWidth, displayHeight);
   s = new Start();
@@ -19,13 +15,8 @@ void setup() {
   c3 = new CharScreen();
   c4 = new CharScreen();
   c5 = new CharScreen();
-  I1 = new IntroScreen();
-  I2 = new IntroScreen();
-  I3 = new IntroScreen();
-  I4 = new IntroScreen();
-  I5 = new IntroScreen();
-
   startState=true;
+  i = new IntroScreen();
 }
 
 void draw() {
@@ -46,19 +37,22 @@ void draw() {
     c4.display(600);
     c5.display(750);
   }
-  if (introState1==true) {
-    I1.displayspiderman();
+  if (spiState==true) {
+    i.displayspiderman();
   }
-  if (introState2==true) {
-    I2.displaybatman();
+  if (batState==true) {
+    i.displaybatman();
   }
-    if (introState3==true) {
-    I3.displaysuperman();
-   if (introState3==true) {
-    I3.displaysuperman();
-   }
-//    if (introState3==true) {
-//    I3.displaysuperman();
+  if (superState==true) {
+    i.displaysuperman();
+  }
+  if (greenState==true) {
+    i.displaygreenarrow();
+  }
+  //  if (hawkState==true) {
+  //    i.displayhawkgirl();
+  //  }
+}
 
 void mousePressed() {
   if (dist(mouseX, mouseY, s.loc.x, s.loc.y) <= s.d/2) {
@@ -66,22 +60,32 @@ void mousePressed() {
     startState=false;
   }
   if (dist(mouseX, mouseY, c1.loc.x, 150) <= c1.d/2) {
-    startState=false;
+    spiState=true;
     charState=false;
-    introState1=true;
+    startState=false;
   }
-  if (dist(mouseX, mouseY, c1.loc.x, 300) <= c1.d/2) {
-    startState=false;
+  else if (dist(mouseX, mouseY, c2.loc.x, 300) <= c2.d/2) {
+    batState=true; 
+    //spiState=false;
     charState=false;
-    introState2=true;
+    startState=false;
   }
-  if (dist(mouseX, mouseY, c1.loc.x, 300) <= c1.d/2) {
-    startState=false;
+  else if (dist(mouseX, mouseY, c3.loc.x, 450) <= c3.d/2) {
+    superState=true;
+    // batState=false; 
+    // spiState=false;
     charState=false;
-    introState3=true;
+    startState=false;
+  }
+  else if (dist(mouseX, mouseY, c4.loc.x, 600) <= c4.d/2) {
+    greenState=true;
+    charState=false;
+    startState=false;
+  }
+  else if (dist(mouseX, mouseY, c5.loc.x, 600) <= c5.d/2) {
+    hawkState=true;
+    charState=false;
+    startState=false;
   }
 }
-//  else {
-//    startState=true;
-//  }
 
