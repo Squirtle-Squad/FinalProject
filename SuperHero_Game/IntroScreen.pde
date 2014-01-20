@@ -1,16 +1,16 @@
 class IntroScreen {
 
   //spiderman intro page
-  PVector vel, velb, loc, locb, locg;
-  int sx, sy;
-  PImage spiderman, spidermanBackground, batman, batmanbackground, superman, supermanbackground, greenarrow, greenarrowbackground;
-  ;
+  PVector vel, velb, loc, locb, locg, loch;
+  PImage spiderman, spidermanBackground, batman, batmanbackground, superman, supermanbackground, greenarrow, greenarrowbackground, hawkgirl, hawkgirlbackground;
+  int sx = 200;
+  int sy = 350;
 
   IntroScreen() {
     loc = new PVector(500, -650);
-    sx=200;
-    sy=350;
-    locb = new PVector(-50, height-50);
+    locb = new PVector(-50, displayHeight-450);
+    locg = new PVector(displayWidth/2 - 100, displayHeight/2);
+    loch = new PVector(displayWidth/2, displayHeight/2 + 500);
     vel = new PVector(0, 5);
     velb = new PVector(5, 0);
     spiderman = loadImage("spiderman.png");
@@ -21,14 +21,14 @@ class IntroScreen {
     supermanbackground = loadImage("sunset sky.jpg");
     greenarrow = loadImage("GreenArrow.png");
     greenarrowbackground = loadImage("greenarrowbackground.jpg");
+    hawkgirl = loadImage("hawkgirl.png");
+    hawkgirlbackground = loadImage("hawkgirlbackground.jpg");
   }
 
 
   //spiderman intro
   void displayspiderman() {
-    image(spidermanBackground, -50, 0, 1050, 800);
-    textSize(30);
-    text("Spiderman", 50, 50);
+    image(spidermanBackground, 0, 0, displayWidth, displayHeight);
 
     image(spiderman, loc.x, loc.y);
     loc.add(vel);
@@ -39,7 +39,7 @@ class IntroScreen {
 
   //batman intro
   void displaybatman() {
-    image(batmanbackground, -50, 0, 1200, height);
+    image(batmanbackground, -50, 0, displayWidth + 100, displayHeight);
     image(batman, locb.x, locb.y, 400, 400);
     locb.add(velb);
     if (locb.x == width/2) {
@@ -48,8 +48,8 @@ class IntroScreen {
   }
   //superman intro
   void displaysuperman() {
-    image(supermanbackground, 0, 0, width, height);
-    image(superman, width/2, loc.y, 500, 500);
+    image(supermanbackground, 0, 0, displayWidth, displayHeight);
+    image(superman, width/2, loc.y, 450, 500);
     loc.add(vel);
     if (loc.y == 350) {
       vel = new PVector(0, 0);
@@ -58,7 +58,7 @@ class IntroScreen {
 
   //greenarrow intro
   void displaygreenarrow() {
-    image(greenarrowbackground, 0, 0, width, height);
+    image(greenarrowbackground, 0, 0, displayWidth, displayHeight);
     image(greenarrow, locg.x, locg.y, sx, sy);
     sx++;
     sy++;
@@ -68,7 +68,12 @@ class IntroScreen {
     }
   }
 
-  void displayfirestar() {
+  void displayhawkgirl() {
+    image(hawkgirlbackground, 0, 0, displayWidth, displayHeight);
+    image(hawkgirl, loch.x, loch.y, 250, 400);
+    loch.sub(vel);
+    if (loch.y == 450) {
+      vel = new PVector(0, 0);
+    }
   }
 }
-
