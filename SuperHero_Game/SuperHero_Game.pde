@@ -31,13 +31,14 @@ void draw() {
     s.display();
     s.button();
   }
-  //  if (keyPressed) {
-  //    if (keyCode=='c') {
-  //      charState=true;
-  //    }
-  //  }
+//  if (keyPressed) {
+//    if (keyCode=='c') {
+//      charState=true;
+//    }
+//  }
   if (charState==true) {
     c1.display(y1);
+    textAlign(LEFT);
     fill(255);
     text("Spiderman", width/2+100, y1);
     c2.display(y2);
@@ -65,9 +66,9 @@ void draw() {
   if (greenState==true) {
     i.displaygreenarrow();
   }
-    if (hawkState==true) {
-      i.displayhawkgirl();
-    }
+  if (hawkState==true) {
+    i.displayhawkgirl();
+  }
 }
 
 void mousePressed() {
@@ -79,12 +80,22 @@ void mousePressed() {
     spiState=true;
     charState=false;
     startState=false;
+    c1.loc=new PVector(-width, -height);
+    c2.loc=new PVector(-width, -height);
+    c3.loc=new PVector(-width, -height);
+    c4.loc=new PVector(-width, -height);
+    c5.loc=new PVector(-width, -height);
   }
   else if (dist(mouseX, mouseY, c2.loc.x, y2) <= c2.d/2) {
     batState=true; 
     //spiState=false;
     charState=false;
     startState=false;
+    c1.loc=new PVector(-width, -height);
+    c2.loc=new PVector(-width, -height);
+    c3.loc=new PVector(-width, -height);
+    c4.loc=new PVector(-width, -height);
+    c5.loc=new PVector(-width, -height);
   }
   else if (dist(mouseX, mouseY, c3.loc.x, y3) <= c3.d/2) {
     superState=true;
@@ -92,16 +103,31 @@ void mousePressed() {
     // spiState=false;
     charState=false;
     startState=false;
+    c1.loc=new PVector(-width, -height);
+    c2.loc=new PVector(-width, -height);
+    c3.loc=new PVector(-width, -height);
+    c4.loc=new PVector(-width, -height);
+    c5.loc=new PVector(-width, -height);
   }
   else if (dist(mouseX, mouseY, c4.loc.x, y4) <= c4.d/2) {
     greenState=true;
     charState=false;
     startState=false;
+    c1.loc=new PVector(-width, -height);
+    c2.loc=new PVector(-width, -height);
+    c3.loc=new PVector(-width, -height);
+    c4.loc=new PVector(-width, -height);
+    c5.loc=new PVector(-width, -height);
   }
   else if (dist(mouseX, mouseY, c5.loc.x, y5) <= c5.d/2) {
     hawkState=true;
     charState=false;
     startState=false;
+    c1.loc=new PVector(-width, -height);
+    c2.loc=new PVector(-width, -height);
+    c3.loc=new PVector(-width, -height);
+    c4.loc=new PVector(-width, -height);
+    c5.loc=new PVector(-width, -height);
   }
 }
 
