@@ -6,8 +6,8 @@ class CharScreen {
   CharScreen() {
     batbutton = loadImage("batman logo.png"); 
     spibutton = loadImage("spidermanlogo.png");
-   // gabutton = loadImage();
-    //habutton = loadImage();
+    gabutton = loadImage("gabutton.png");
+    habutton = loadImage("habutton.png");
     supbutton = loadImage("supbutton.png");
 
     loc = new PVector(x, y);
@@ -19,6 +19,8 @@ class CharScreen {
     image(batbutton, width/2 - 10, 250, 150, 100);
     image(spibutton, width/2, 125, 125, 85);
     image(supbutton, width/2, 400, 125, 100 );
-    }
+    image(gabutton, width/2 + 10, 550, 115, 100);
+    image(habutton, width/2 + 10, 725, 100,125);
   }
+}
 
