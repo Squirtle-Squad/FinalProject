@@ -1,5 +1,6 @@
 
 boolean startState, charState, spiState, batState, superState, greenState, hawkState, gameState, levelState, endState;
+PImage grid;
 Start s;
 CharScreen c1;
 CharScreen c2;
@@ -10,6 +11,7 @@ IntroScreen i;
 int y1, y2, y3, y4, y5;
 void setup() {
   size(displayWidth, displayHeight);
+  grid = loadImage("coolgrid.jpg");
   s = new Start();
   c1 = new CharScreen();
   c2 = new CharScreen();
@@ -26,16 +28,18 @@ void setup() {
 }
 
 void draw() {
+
   background(0);
+  image(grid, 0, 0, displayWidth, displayHeight);
   if (startState==true) {
     s.display();
     s.button();
   }
-//  if (keyPressed) {
-//    if (keyCode=='c') {
-//      charState=true;
-//    }
-//  }
+  //  if (keyPressed) {
+  //    if (keyCode=='c') {
+  //      charState=true;
+  //    }
+  //  }
   if (charState==true) {
     c1.display(y1);
     textAlign(LEFT);
