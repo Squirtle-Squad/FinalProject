@@ -9,7 +9,7 @@ ArrayList<EnemyBullets> ebullets=new ArrayList<EnemyBullets>();
 ArrayList<ShipBullets> sbullets=new ArrayList<ShipBullets>();
 Ship S;
 void setup() {
-  size(700, 700);
+  size(displayWidth, displayHeight);
   int(random(aliens.size()));
   for (int x = 0; x < cols; x++) {
     for (int y=0; y<rows;y++) {
