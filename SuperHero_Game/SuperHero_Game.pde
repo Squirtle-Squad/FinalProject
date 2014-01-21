@@ -8,7 +8,7 @@ CharScreen c3;
 CharScreen c4;
 CharScreen c5;
 IntroScreen i;
-int y1, y2, y3, y4, y5;
+int y1, y2, y3, y4, y5, x1, x2;
 void setup() {
   size(displayWidth, displayHeight);
   grid = loadImage("coolgrid.jpg");
@@ -20,11 +20,13 @@ void setup() {
   c5 = new CharScreen();
   startState=true;
   i = new IntroScreen();
-  y1=150;
-  y2=300;
-  y3=450;
-  y4=600;
-  y5=750;
+  x1 =100;
+  x2 = width - 100;
+  y1=125;
+  y2=275;
+  y3=425;
+  y4=575;
+  y5=725;
 }
 
 void draw() {
@@ -42,22 +44,22 @@ void draw() {
   //    }
   //  }
   if (charState==true) {
-    c1.display(y1);
+    c1.display(x1, y1);
     textAlign(LEFT);
     fill(255);
-    text("Spiderman", width/2+100, y1);
-    c2.display(y2);
+    text("Spiderman", width/2-500, y1 + 35);
+    c2.display(x2, y2);
     fill(255);
-    text("Batman", width/2+100, y2);
-    c3.display(y3);
+    text("Batman", width/2+450, y2 + 30);
+    c3.display(x1, y3);
     fill(255);
-    text("Superman", width/2+100, y3); 
-    c4.display(y4);
+    text("Superman", width/2-500, y3 + 40); 
+    c4.display(x2, y4);
     fill(255);
-    text("Green Arrow", width/2+100, y4); 
-    c5.display(y5);
+    text("Green Arrow", width/2+400, y4 + 30); 
+    c5.display(x1, y5);
     fill(255);
-    text("Hawk Girl", width/2+100, y5);
+    text("Hawk Girl", width/2-500, y5 + 30);
   }
   if (spiState==true) {
     i.displayspiderman();
@@ -81,7 +83,7 @@ void mousePressed() {
     charState=true;
     startState=false;
   }
-  if (dist(mouseX, mouseY, c1.loc.x, y1) <= c1.d/2) {
+  if (dist(mouseX, mouseY, x1, y1) <= c1.d/2) {
     spiState=true;
     charState=false;
     startState=false;
@@ -91,7 +93,7 @@ void mousePressed() {
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, c2.loc.x, y2) <= c2.d/2) {
+  else if (dist(mouseX, mouseY, x2, y2) <= c2.d/2) {
     batState=true; 
     //spiState=false;
     charState=false;
@@ -102,7 +104,7 @@ void mousePressed() {
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, c3.loc.x, y3) <= c3.d/2) {
+  else if (dist(mouseX, mouseY, x1, y3) <= c3.d/2) {
     superState=true;
     // batState=false; 
     // spiState=false;
@@ -114,7 +116,7 @@ void mousePressed() {
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, c4.loc.x, y4) <= c4.d/2) {
+  else if (dist(mouseX, mouseY, x2, y4) <= c4.d/2) {
     greenState=true;
     charState=false;
     startState=false;
@@ -124,7 +126,7 @@ void mousePressed() {
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, c5.loc.x, y5) <= c5.d/2) {
+  else if (dist(mouseX, mouseY, x1, y5) <= c5.d/2) {
     hawkState=true;
     charState=false;
     startState=false;
