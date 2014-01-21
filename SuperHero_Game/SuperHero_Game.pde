@@ -30,6 +30,7 @@ void setup() {
 void draw() {
 
   background(0);
+
   image(grid, 0, 0, displayWidth, displayHeight);
   if (startState==true) {
     s.display();
