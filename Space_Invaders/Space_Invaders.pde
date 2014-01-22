@@ -3,13 +3,12 @@ int cols = 5;
 int currentTime=0;
 int oldTime=0;
 int rand;
-boolean shipgun;
 ArrayList<Enemies> aliens = new ArrayList<Enemies>();
 ArrayList<EnemyBullets> ebullets=new ArrayList<EnemyBullets>();
 ArrayList<ShipBullets> sbullets=new ArrayList<ShipBullets>();
 Ship S;
 void setup() {
-  size(displayWidth, displayHeight);
+  size(500, 500);
   int(random(aliens.size()));
   for (int x = 0; x < cols; x++) {
     for (int y=0; y<rows;y++) {
@@ -30,19 +29,18 @@ void draw() {
 
   S.display();
   S.move();
-  for(int i=0; i<sbullets.size(); i++){
-    if(keyPressed){
-     if(key==' '){
-  ShipBullets s= sbullets.get(i);
-  s.display();
-  s.shoot();
+  S.shoot(sbullets);
+  for (int i = 0; i < sbullets.size(); i++) {
+        ShipBullets bullet = (ShipBullets) sbullets.get(i);
+        bullet.shot();
+        bullet.check(aliens);
     }
-  }
-  }
+
   for (int i=0; i<aliens.size();i++) {
     Enemies a = aliens.get(i);
     a.display();
     a.move();
+    a.check(sbullets);
   }
   if (currentTime-oldTime>=2000) {
     oldTime=currentTime;
@@ -61,6 +59,7 @@ void draw() {
   for (EnemyBullets all: ebullets) {
     all.display();
     all.shoot();
+    all.check(S);
   }
   for (Enemies a: aliens) {
     if (a.loc.x + 50 > width || a.loc.x < 0) {
