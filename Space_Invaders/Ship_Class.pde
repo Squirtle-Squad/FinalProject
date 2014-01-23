@@ -5,16 +5,18 @@ class Ship {
   boolean canshoot;
   int delay;
   int lives;
+  int a;
   Ship(float x, float y){
     loc=new PVector(x,y);
     size=50;
-    c= color(0,255,0);
+    a=100;
+    //c= color(0,255,0,a);
     canshoot= true;
     delay=0;
     lives=3;
   }
   void display(){
-   fill(c);
+   fill(0,255,0,a);
   rect(loc.x,loc.y,size,size);  
   }
   void move(){
@@ -45,6 +47,7 @@ void check(ArrayList<EnemyBullets> ebullets){
  if(dist(loc.x,loc.y,eb.loc.x,eb.loc.y)<=size/2+eb.d/2){
   ebullets.remove(i);
   lives--;
+  a=-30;
  }
   } 
 }
