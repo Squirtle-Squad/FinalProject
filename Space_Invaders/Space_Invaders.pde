@@ -26,12 +26,12 @@ void draw() {
   background(0);
   currentTime=millis();
 
-  
+
   for (int i = 0; i < sbullets.size(); i++) {
     ShipBullets bullet = (ShipBullets) sbullets.get(i);
     bullet.shot();
     bullet.check(aliens);
-    
+
     if (bullet.active == false) {
       sbullets.remove(i);
     }
@@ -53,13 +53,14 @@ void draw() {
     for (int i=0; i<aliens.size();i++) {
       ebullets.add(new EnemyBullets(aliens.get(rand).loc.x, aliens.get(rand).loc.y));
     }
-  }
+    
 
+  }
   //DISPLAY AND MOVE ALL BULLETS IN BULLET ARRAYLIST
   for (EnemyBullets all: ebullets) {
     all.display();
     all.shoot();
-  }
+     }
   for (Enemies a: aliens) {
     if (a.loc.x + 50 > width || a.loc.x < 0) {
       for (Enemies all: aliens) {
@@ -68,7 +69,7 @@ void draw() {
       }
     }
   }
-S.display();
+  S.display();
   S.move();
   S.shoot(sbullets);
   S.check(ebullets);
