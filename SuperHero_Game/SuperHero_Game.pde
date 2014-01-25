@@ -24,13 +24,13 @@ void setup() {
   y3=450;
   y4=600;
   y5=750;
-  oldtime=curtime;
-  curtime=millis();
+  // oldtime=curtime;
+  //curtime=millis();
 }
 
 void draw() {
   background(0);
- // curtime=millis()-starttime;
+  // curtime=millis()-starttime;
   if (startState==true) {
     s.display();
     s.button();
@@ -86,7 +86,7 @@ void draw() {
     superState=false;
     greenState=false;
     hawkState=false;
-  //  curtime=oldtime;
+    //  curtime=oldtime;
   }
 }
 
@@ -104,7 +104,8 @@ void mousePressed() {
     c3.loc=new PVector(-width, -height);
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
-    starttime=0;
+    //   starttime=0;
+    //  curtime=millis();
     oldtime=curtime;
   }
   else if (dist(mouseX, mouseY, c2.loc.x, y2) <= c2.d/2) {
