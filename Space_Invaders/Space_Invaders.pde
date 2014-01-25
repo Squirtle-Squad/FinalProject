@@ -8,7 +8,7 @@ ArrayList<EnemyBullets> ebullets=new ArrayList<EnemyBullets>();
 ArrayList<ShipBullets> sbullets=new ArrayList<ShipBullets>();
 Ship S;
 void setup() {
-  size(700, 700);
+  size(700, 500);
   int(random(aliens.size()));
   for (int x = 0; x < cols; x++) {
     for (int y=0; y<rows;y++) {
@@ -26,13 +26,12 @@ void draw() {
   background(0);
   currentTime=millis();
 
-  S.display();
-  S.move();
-  S.shoot(sbullets);
+  
   for (int i = 0; i < sbullets.size(); i++) {
     ShipBullets bullet = (ShipBullets) sbullets.get(i);
     bullet.shot();
     bullet.check(aliens);
+    
     if (bullet.active == false) {
       sbullets.remove(i);
     }
@@ -42,7 +41,6 @@ void draw() {
     Enemies a = aliens.get(i);
     a.display();
     a.move();
-    //    a.check(sbullets);
   }
   if (currentTime-oldTime>=2000) {
     oldTime=currentTime;
@@ -61,14 +59,18 @@ void draw() {
   for (EnemyBullets all: ebullets) {
     all.display();
     all.shoot();
-    all.check(S);
   }
   for (Enemies a: aliens) {
     if (a.loc.x + 50 > width || a.loc.x < 0) {
       for (Enemies all: aliens) {
         all.vel.x = -all.vel.x;
+        all.ypos+=all.ychange;
       }
     }
   }
+S.display();
+  S.move();
+  S.shoot(sbullets);
+  S.check(ebullets);
 }
 
