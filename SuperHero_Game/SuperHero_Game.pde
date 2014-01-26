@@ -56,7 +56,7 @@ void draw() {
     text("Superman", width/2-500, y3 + 40); 
     c4.display(x2, y4);
     fill(255);
-    text("Green Arrow", width/2+400, y4 + 30); 
+    text("Green Arrow", width/2+400, y4 + 55); 
     c5.display(x1, y5);
     fill(255);
     text("Hawk Girl", width/2-500, y5 + 30);

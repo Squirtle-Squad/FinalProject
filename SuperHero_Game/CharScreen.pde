@@ -15,7 +15,7 @@ class CharScreen {
   }
   void display(int x, int y) {
     fill(30, 240, 240);
-    rect(x, y, d, d);
+    ellipse(x, y, d, d);
     image(batbutton, width/2 - 10, 250, 150, 100);
     image(spibutton, width/2, 125, 125, 85);
     image(supbutton, width/2, 400, 125, 100 );
