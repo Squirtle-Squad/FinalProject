@@ -92,6 +92,7 @@ void mousePressed() {
     c3.loc=new PVector(-width, -height);
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
+    
   }
   else if (dist(mouseX, mouseY, x2, y2) <= c2.d/2) {
     batState=true; 
