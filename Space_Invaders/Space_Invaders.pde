@@ -52,6 +52,10 @@ void draw() {
 
     for (int i=0; i<aliens.size();i++) {
       ebullets.add(new EnemyBullets(aliens.get(rand).loc.x, aliens.get(rand).loc.y));
+    if(ebullets.get(i).active=false){
+     ebullets.clear(); 
+    }
+      
     }
     
 
@@ -60,6 +64,8 @@ void draw() {
   for (EnemyBullets all: ebullets) {
     all.display();
     all.shoot();
+    all.check(S);
+     
      }
   for (Enemies a: aliens) {
     if (a.loc.x + 50 > width || a.loc.x < 0) {
@@ -72,6 +78,5 @@ void draw() {
   S.display();
   S.move();
   S.shoot(sbullets);
-  S.check(ebullets);
 }
 
