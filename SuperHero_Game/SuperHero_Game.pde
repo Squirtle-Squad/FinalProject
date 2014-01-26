@@ -92,50 +92,55 @@ void mousePressed() {
     c3.loc=new PVector(-width, -height);
     c4.loc=new PVector(-width, -height);
     c5.loc=new PVector(-width, -height);
-    
+//    if (spiState = true || dist(mouseX, mouseY, width/7, height/7-10) <=175) {
+//      background(0); 
+//      spiState=false;
+//      charState=false;
+//      startState=false;
+//    } trying to get button to work instead spiderman pg then copy paste into others
   }
-  else if (dist(mouseX, mouseY, x2, y2) <= c2.d/2) {
-    batState=true; 
-    //spiState=false;
-    charState=false;
-    startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    else if (dist(mouseX, mouseY, x2, y2) <= c2.d/2) {
+      batState=true; 
+      //spiState=false;
+      charState=false;
+      startState=false;
+      c1.loc=new PVector(-width, -height);
+      c2.loc=new PVector(-width, -height);
+      c3.loc=new PVector(-width, -height);
+      c4.loc=new PVector(-width, -height);
+      c5.loc=new PVector(-width, -height);
+    }
+    else if (dist(mouseX, mouseY, x1, y3) <= c3.d/2) {
+      superState=true;
+      // batState=false; 
+      // spiState=false;
+      charState=false;
+      startState=false;
+      c1.loc=new PVector(-width, -height);
+      c2.loc=new PVector(-width, -height);
+      c3.loc=new PVector(-width, -height);
+      c4.loc=new PVector(-width, -height);
+      c5.loc=new PVector(-width, -height);
+    }
+    else if (dist(mouseX, mouseY, x2, y4) <= c4.d/2) {
+      greenState=true;
+      charState=false;
+      startState=false;
+      c1.loc=new PVector(-width, -height);
+      c2.loc=new PVector(-width, -height);
+      c3.loc=new PVector(-width, -height);
+      c4.loc=new PVector(-width, -height);
+      c5.loc=new PVector(-width, -height);
+    }
+    else if (dist(mouseX, mouseY, x1, y5) <= c5.d/2) {
+      hawkState=true;
+      charState=false;
+      startState=false;
+      c1.loc=new PVector(-width, -height);
+      c2.loc=new PVector(-width, -height);
+      c3.loc=new PVector(-width, -height);
+      c4.loc=new PVector(-width, -height);
+      c5.loc=new PVector(-width, -height);
+    }
   }
-  else if (dist(mouseX, mouseY, x1, y3) <= c3.d/2) {
-    superState=true;
-    // batState=false; 
-    // spiState=false;
-    charState=false;
-    startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
-  }
-  else if (dist(mouseX, mouseY, x2, y4) <= c4.d/2) {
-    greenState=true;
-    charState=false;
-    startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
-  }
-  else if (dist(mouseX, mouseY, x1, y5) <= c5.d/2) {
-    hawkState=true;
-    charState=false;
-    startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
-  }
-}
 

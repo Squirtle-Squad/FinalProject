@@ -88,10 +88,10 @@ class IntroScreen {
 
   void displayhawkgirl() {
     image(hawkgirlbackground, 0, 0, displayWidth, displayHeight);
-    ellipse(width/8,height/8,175,175);
+    ellipse(width/7,height/7,175,175);
     fill(255,32,41);
     textAlign(CENTER);
-    text("Continue \n to game.",width/8,height/8-10);
+    text("Continue \n to game.",width/7,height/7-10);
     fill(255);
     image(hawkgirl, loch.x, loch.y, 250, 400);
     loch.sub(vel);
