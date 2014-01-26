@@ -4,7 +4,7 @@ PImage grid;
 Start s;
 CharScreen c1;
 CharScreen c2;
-CharScreen c3;
+CharScreen c3; 
 CharScreen c4;
 CharScreen c5;
 IntroScreen i;
