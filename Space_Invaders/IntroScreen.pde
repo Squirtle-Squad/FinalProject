@@ -20,7 +20,7 @@ class IntroScreen {
     supermanbackground = loadImage("sunset sky.jpg");
     greenarrow = loadImage("GreenArrow.png");
     greenarrowbackground = loadImage("greenarrowbackground.jpg");
-    hawkgirl = loadImage("hawkgirl.jpg");
+    hawkgirl = loadImage("hawkgirl.png");
     hawkgirlbackground = loadImage("hawkgirlbackground.jpg");
   }
 
