@@ -29,11 +29,11 @@ class IntroScreen {
   //spiderman intro
   void displayspiderman() {
     image(spidermanBackground, 0, 0, displayWidth, displayHeight);
-    ellipse(width/8,height/8,175,175);
-    fill(255,32,41);
-    textAlign(CENTER);
-    text("Continue \n to game.",width/8,height/8-10);
-    fill(255);
+    //    ellipse(width/8,height/8,175,175);
+    //    fill(255,32,41);
+    //    textAlign(CENTER);
+    //    text("Continue \n to game.",width/8,height/8-10);
+    //    fill(255);
     image(spiderman, loc.x, loc.y);
     loc.add(vel);
     if (loc.y == 0) {
@@ -44,11 +44,11 @@ class IntroScreen {
   //batman intro
   void displaybatman() {
     image(batmanbackground, -50, 0, displayWidth + 100, displayHeight);
-    ellipse(width/8,height/8,175,175);
-    fill(255,32,41);
-    textAlign(CENTER);
-    text("Continue \n to game.",width/8,height/8-10);
-    fill(255);
+    //    ellipse(width/8,height/8,175,175);
+    //    fill(255,32,41);
+    //    textAlign(CENTER);
+    //    text("Continue \n to game.",width/8,height/8-10);
+    //    fill(255);
     image(batman, locb.x, locb.y, 400, 400);
     locb.add(velb);
     if (locb.x == width/2) {
@@ -58,11 +58,12 @@ class IntroScreen {
   //superman intro
   void displaysuperman() {
     image(supermanbackground, 0, 0, displayWidth, displayHeight);
-    ellipse(width/8,height/8,175,175);
-    fill(255,32,41);
-    textAlign(CENTER);
-    text("Continue \n to game.",width/8,height/8-10);
-    fill(255);image(superman, width/2, loc.y, 450, 500);
+//    ellipse(width/8, height/8, 175, 175);
+//    fill(255, 32, 41);
+//    textAlign(CENTER);
+//    text("Continue \n to game.", width/8, height/8-10);
+//    fill(255);
+    image(superman, width/2, loc.y, 450, 500);
     loc.add(vel);
     if (loc.y == 350) {
       vel = new PVector(0, 0);
@@ -72,11 +73,11 @@ class IntroScreen {
   //greenarrow intro
   void displaygreenarrow() {
     image(greenarrowbackground, 0, 0, displayWidth, displayHeight);
-    ellipse(width/8,height/8,175,175);
-    fill(255,32,41);
-    textAlign(CENTER);
-    text("Continue \n to game.",width/8,height/8-10);
-    fill(255);
+//    ellipse(width/8, height/8, 175, 175);
+//    fill(255, 32, 41);
+//    textAlign(CENTER);
+//    text("Continue \n to game.", width/8, height/8-10);
+//    fill(255);
     image(greenarrow, locg.x, locg.y, sx, sy);
     sx++;
     sy++;
@@ -88,15 +89,17 @@ class IntroScreen {
 
   void displayhawkgirl() {
     image(hawkgirlbackground, 0, 0, displayWidth, displayHeight);
-    ellipse(width/7,height/7,175,175);
-    fill(255,32,41);
-    textAlign(CENTER);
-    text("Continue \n to game.",width/7,height/7-10);
-    fill(255);
+//    ellipse(width/7, height/7, 175, 175);
+//    fill(255, 32, 41);
+//    textAlign(CENTER);
+//    text("Continue \n to game.", width/7, height/7-10);
+//    fill(255);
     image(hawkgirl, loch.x, loch.y, 250, 400);
     loch.sub(vel);
     if (loch.y == 450) {
       vel = new PVector(0, 0);
     }
   }
+ 
 }
+
