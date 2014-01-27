@@ -31,6 +31,7 @@ GameOverScreen GO;
 void setup() {
   size(displayWidth, displayHeight);
   colorMode(RGB);
+  imageMode(CORNER);
   grid = loadImage("coolgrid.jpg");
   s = new Start();
   c1 = new CharScreen();
@@ -40,12 +41,12 @@ void setup() {
   c5 = new CharScreen();
   i = new IntroScreen();
   x1 =100;
-  x2 = width - 100;
-  y1=125;
-  y2=275;
-  y3=425;
-  y4=575;
-  y5=725;
+  //  x2 = width - 100;
+  //  y1=125;
+  //  y2=275;
+  //  y3=425;
+  //  y4=575;
+  //  y5=725;
   loc = new PVector(200, 100);
   d=170;
   startState=true; //code starts out displaying start screen
@@ -69,6 +70,7 @@ void setup() {
 
 void draw() {
   background(0);
+  imageMode(CORNER);
   image(grid, 0, 0, displayWidth, displayHeight);
   if (startState==true) { //the start screen displays and a button to get to the character selection screen displays
     s.display();
@@ -76,22 +78,22 @@ void draw() {
   }
 
   if (charState==true) { //on the character screen each character's name displays and a button 
-    c1.display(x1, y1);
+    c1.display();
     textAlign(LEFT);
     fill(255);
-    text("Spiderman", width/2-500, y1 + 35);
-    c2.display(x2, y2);
+    text("Spiderman", c1.loc1.x+200, c1.loc1.y);
+    c2.display();
     fill(255);
-    text("Batman", width/2+450, y2 + 30);
-    c3.display(x1, y3);
+    text("Batman", c2.loc2.x-300, c2.loc2.y);
+    c3.display();
     fill(255);
-    text("Superman", width/2-500, y3 + 40); 
-    c4.display(x2, y4);
+    text("Superman", c3.loc3.x+200, c3.loc3.y); 
+    c4.display();
     fill(255);
-    text("Green Arrow", width/2+400, y4 + 55); 
-    c5.display(x1, y5);
+    text("Green Arrow", c4.loc4.x-300, c4.loc4.y); 
+    c5.display();
     fill(255);
-    text("Hawk Girl", width/2-500, y5 + 30);
+    text("Hawk Girl", c5.loc5.x+200, c5.loc5.y);
   }
   if (spiState==true) {
     i.displayspiderman();
@@ -197,15 +199,15 @@ void mousePressed() {
     charState=true;
     startState=false;
   }
-  if (dist(mouseX, mouseY, x1, y1) <= c1.d/2) {
+  if (dist(mouseX, mouseY, c1.loc1.x, c1.loc1.y) <= c1.d/2) {
     spiState=true;
     charState=false;
     startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    c1.loc1=new PVector(-width, -height);
+    c2.loc2=new PVector(-width, -height);
+    c3.loc3=new PVector(-width, -height);
+    c4.loc4=new PVector(-width, -height);
+    c5.loc5=new PVector(-width, -height);
     //    if (spiState = true || dist(mouseX, mouseY, width/7, height/7-10) <=175) {
     //      background(0); 
     //      spiState=false;
@@ -213,48 +215,48 @@ void mousePressed() {
     //      startState=false;
     //    } trying to get button to work instead spiderman pg then copy paste into others
   }
-  else if (dist(mouseX, mouseY, x2, y2) <= c2.d/2) {
+  else if (dist(mouseX, mouseY, c2.loc2.x, c2.loc2.y) <= c2.d/2) {
     batState=true; 
     //spiState=false;
     charState=false;
     startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    c1.loc1=new PVector(-width, -height);
+    c2.loc2=new PVector(-width, -height);
+    c3.loc3=new PVector(-width, -height);
+    c4.loc4=new PVector(-width, -height);
+    c5.loc5=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, x1, y3) <= c3.d/2) {
+  else if (dist(mouseX, mouseY, c3.loc3.x, c3.loc3.y) <= c3.d/2) {
     superState=true;
     // batState=false; 
     // spiState=false;
     charState=false;
     startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    c1.loc1=new PVector(-width, -height);
+    c2.loc2=new PVector(-width, -height);
+    c3.loc3=new PVector(-width, -height);
+    c4.loc4=new PVector(-width, -height);
+    c5.loc5=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, x2, y4) <= c4.d/2) {
+  else if (dist(mouseX, mouseY, c4.loc4.x, c4.loc4.y) <= c4.d/2) {
     greenState=true;
     charState=false;
     startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    c1.loc1=new PVector(-width, -height);
+    c2.loc2=new PVector(-width, -height);
+    c3.loc3=new PVector(-width, -height);
+    c4.loc4=new PVector(-width, -height);
+    c5.loc5=new PVector(-width, -height);
   }
-  else if (dist(mouseX, mouseY, x1, y5) <= c5.d/2) {
+  else if (dist(mouseX, mouseY, c5.loc5.x, c5.loc5.y) <= c5.d/2) {
     hawkState=true;
     charState=false;
     startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    c1.loc1=new PVector(-width, -height);
+    c2.loc2=new PVector(-width, -height);
+    c3.loc3=new PVector(-width, -height);
+    c4.loc4=new PVector(-width, -height);
+    c5.loc5=new PVector(-width, -height);
   }
   if (dist(mouseX, mouseY, loc.x, loc.y)<=d/2) {
     gameState=true;
@@ -265,11 +267,11 @@ void mousePressed() {
     hawkState=false;
     charState=false;
     startState=false;
-    c1.loc=new PVector(-width, -height);
-    c2.loc=new PVector(-width, -height);
-    c3.loc=new PVector(-width, -height);
-    c4.loc=new PVector(-width, -height);
-    c5.loc=new PVector(-width, -height);
+    c1.loc1=new PVector(-width, -height);
+    c2.loc2=new PVector(-width, -height);
+    c3.loc3=new PVector(-width, -height);
+    c4.loc4=new PVector(-width, -height);
+    c5.loc5=new PVector(-width, -height);
   }
 }
 
