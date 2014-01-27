@@ -1,19 +1,48 @@
 class Ship {
   PVector loc;
   int size;
-  boolean canshoot;
+  boolean canshoot, spi, bat, sup, green, hawk;
   int delay;
-  // int lives;
+   PImage spiderman, batman,  superman, greenarrow,  hawkgirl;
   Ship(float x, float y) {
     loc=new PVector(x, y);
     size=50;
     canshoot= true;
+    spi=false;
+    bat= false;
+    sup=false;
+    green=false;
+    hawk=false;
     delay=0;
-    // lives=3;
+          spiderman = loadImage("spiderman.png");
+  
+  
+    batman = loadImage("batman.png");
+  
+    superman = loadImage("superman.png");
+  
+    greenarrow = loadImage("GreenArrow.png");
+  
+    hawkgirl = loadImage("hawkgirl.png");
+  
+
   }
   void display() {
-    fill(0, 255, 0);
-    rect(loc.x, loc.y, size, size);
+   if(spi){
+    image(spiderman,loc.x,loc.y,size,size);
+   }
+  else if(bat){
+    image(batman,loc.x,loc.y,size,size);
+   }
+  else if(sup){
+    image(superman,loc.x,loc.y,size,size);
+   }
+  else if(green){
+    image(greenarrow,loc.x,loc.y,size,size);
+   }
+  else if(hawk){
+    image(hawkgirl,loc.x,loc.y,size,size);
+   } 
   }
   void move() {
     if (keyPressed) {
@@ -37,15 +66,5 @@ class Ship {
     }
   }
 
-  /*  void check(ArrayList<EnemyBullets> ebullet) {
-   for (int i=0; i<aliens.size();i++) {
-   EnemyBullets eb= (EnemyBullets) ebullets.get(i);
-   if (dist(loc.x, loc.y, eb.loc.x, eb.loc.y)<=size/2+eb.d/2) {
-   ebullets.remove(i);
-   lives--;
-   loc.x=size/2;
-   }
-   }
-   }*/
 }
 

@@ -40,6 +40,7 @@ void setup() {
   i = new IntroScreen();
   loc = new PVector(200, 100);
   d=170;
+
   startState=true; //code starts out displaying start screen
 
   int(random(aliens.size())); 
@@ -89,22 +90,27 @@ void draw() {
   if (spiState==true) {
     i.displayspiderman(); //spiderman intro page
     button(); //button to go to game
+    S.spi=true;
   }
   if (batState==true) {
     i.displaybatman(); //batman intro page
     button(); //button to go to game
+S.bat=true;
   }
   if (superState==true) {
     i.displaysuperman(); //superman intro page
     button(); //button to go to game
+S.sup=true;
   }
   if (greenState==true) {
     i.displaygreenarrow(); //green arrow intro page
     button(); //button to go to game
+S.green=true;
   }
   if (hawkState==true) {
     i.displayhawkgirl(); //hawk girl intro page
     button(); //button to go to game
+    S.hawk=true;
   }
   if (gameState==true) { //during the game...
     background(0);
@@ -123,7 +129,7 @@ void draw() {
 
     for (int i=aliens.size()-1; i>0;i--) { 
       Enemies a = aliens.get(i); 
-      a.display(); 
+      a.display(S); 
       a.move();
     } 
     if (currentTime-oldTime>=2000) { 
