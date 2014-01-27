@@ -30,9 +30,6 @@ class IntroScreen {
   void displayspiderman() {
     imageMode(CORNER);
     image(spidermanBackground, -50, 0, displayWidth +100, displayHeight);
-    textSize(30);
-    text("Spiderman", 50, 50);
-
     image(spiderman, loc.x, loc.y);
     loc.add(vel);
     if (loc.y == 0) {

@@ -11,11 +11,11 @@ class CharScreen {
     habutton = loadImage("habutton.png");
     supbutton = loadImage("supbutton.png");
 
-    loc1 = new PVector(300, 125);
-    loc2 = new PVector(width-300, 275);
-    loc3 = new PVector(300, 425);
-    loc4 = new PVector(width-300, 575);
-    loc5 = new PVector(300, 725);
+    loc1 = new PVector(350, 125);
+    loc2 = new PVector(width-350, 275);
+    loc3 = new PVector(350, 425);
+    loc4 = new PVector(width-350, 575);
+    loc5 = new PVector(350, 725);
     d=150;
   }
   void display() { //makes the five buttons display when the method is run
