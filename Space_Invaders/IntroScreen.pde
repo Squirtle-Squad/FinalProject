@@ -20,7 +20,7 @@ class IntroScreen {
     supermanbackground = loadImage("sunset sky.jpg");
     greenarrow = loadImage("GreenArrow.png");
     greenarrowbackground = loadImage("greenarrowbackground.jpg");
-    hawkgirl = loadImage("hawkgirl.jpg");
+    hawkgirl = loadImage("hawkgirl.png");
     hawkgirlbackground = loadImage("hawkgirlbackground.jpg");
   }
 
@@ -40,10 +40,10 @@ class IntroScreen {
 
   //batman intro
   void displaybatman() {
-    image(batmanbackground, -50, 0, 1200, height);
-    image(batman, locb.x, locb.y, 400, 400);
+    image(batmanbackground, -50, 0, displayWidth + 100, displayHeight);
+    image(batman, locb.x, locb.y-300, 400, 400);
     locb.add(velb);
-    if (locb.x == width/2) {
+    if (locb.x >= width/2) {
       velb = new PVector(0, 0);
     }
   }
