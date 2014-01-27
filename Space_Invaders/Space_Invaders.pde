@@ -1,13 +1,16 @@
-boolean startState, charState, spiState, batState, superState, greenState, hawkState, gameState, levelState, endState;
-PImage grid;
+boolean startState, charState, spiState, batState, superState, greenState, hawkState, gameState, levelState, endState; //control what screen is displayed
+PImage grid; //background to start screen
 Start s;
+//the buttons on the character selection screen
 CharScreen c1;
 CharScreen c2;
 CharScreen c3; 
 CharScreen c4;
 CharScreen c5;
 IntroScreen i;
+//location variables for the character selection screen buttons
 int y1, y2, y3, y4, y5, x1, x2;
+//location for the button on the character intro page
 PVector loc;
 int d;
 
@@ -35,7 +38,6 @@ void setup() {
   c3 = new CharScreen();
   c4 = new CharScreen();
   c5 = new CharScreen();
-  startState=true;
   i = new IntroScreen();
   x1 =100;
   x2 = width - 100;
@@ -46,6 +48,7 @@ void setup() {
   y5=725;
   loc = new PVector(200, 100);
   d=170;
+  startState=true; //code starts out displaying start screen
 
   int(random(aliens.size())); 
   for (int x = 0; x < cols; x++) { 
@@ -67,16 +70,12 @@ void setup() {
 void draw() {
   background(0);
   image(grid, 0, 0, displayWidth, displayHeight);
-  if (startState==true) {
+  if (startState==true) { //the start screen displays and a button to get to the character selection screen displays
     s.display();
     s.button();
   }
-  //  if (keyPressed) {
-  //    if (keyCode=='c') {
-  //      charState=true;
-  //    }
-  //  }
-  if (charState==true) {
+
+  if (charState==true) { //on the character screen each character's name displays and a button 
     c1.display(x1, y1);
     textAlign(LEFT);
     fill(255);
