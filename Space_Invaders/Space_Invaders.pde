@@ -50,7 +50,7 @@ void setup() {
     }
   }
 
-  S=new Ship(width/2, height-100); 
+  S=new Ship(width/2, height-200); 
   for (int i=0;i<sbullets.size();) { 
     sbullets.add(new ShipBullets(S.loc.x, S.loc.y));
   }
@@ -177,7 +177,7 @@ S.green=true;
     GO.displayLose();
     gameState=false;
   }
-  if (score==23) {
+  if (score==24) {
     GO.displayWin();
     gameState=false;
   }

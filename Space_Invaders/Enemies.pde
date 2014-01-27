@@ -8,39 +8,29 @@ class Enemies {
   Enemies(float x, float y) {
     loc=new PVector(x, y);
     vel=new PVector(2, 0);
-    size = 50;
-    
-    
+    size = 60;
     goblin = loadImage("green goblin.png");
-    
     joker =loadImage("joker.png");
-    
-     
     lex =loadImage("lex luthor.png");
-    
-    
     archer =loadImage("black archer.png");
-    
-    
     shock=loadImage("aftershock.png");
-    
   }
   void display(Ship s) {
-    if(s.spi){
-    image(goblin,loc.x,loc.y,size,size);
-   }
-  else if(s.bat){
-    image(joker,loc.x,loc.y,size,size);
-   }
-  else if(s.sup){
-    image(lex,loc.x,loc.y,size,size);
-   }
-  else if(s.green){
-    image(archer,loc.x,loc.y,size,size);
-   }
-  else if(s.hawk){
-    image(shock,loc.x,loc.y,size,size);
-   }
+    if (s.spi) {
+      image(goblin, loc.x, loc.y, size, size);
+    }
+    else if (s.bat) {
+      image(joker, loc.x, loc.y, size, size);
+    }
+    else if (s.sup) {
+      image(lex, loc.x, loc.y, size, size);
+    }
+    else if (s.green) {
+      image(archer, loc.x, loc.y, size, size);
+    }
+    else if (s.hawk) {
+      image(shock, loc.x, loc.y, size, size);
+    }
   }
   void move() {
     loc.add(vel);

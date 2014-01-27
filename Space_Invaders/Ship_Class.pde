@@ -3,10 +3,10 @@ class Ship {
   int size;
   boolean canshoot, spi, bat, sup, green, hawk;
   int delay;
-   PImage spiderman, batman,  superman, greenarrow,  hawkgirl;
+  PImage spiderman, batman, superman, greenarrow, hawkgirl;
   Ship(float x, float y) {
     loc=new PVector(x, y);
-    size=50;
+    size=150;
     canshoot= true;
     spi=false;
     bat= false;
@@ -14,35 +14,28 @@ class Ship {
     green=false;
     hawk=false;
     delay=0;
-          spiderman = loadImage("spiderman.png");
-  
-  
+    spiderman = loadImage("spiderman.png");
     batman = loadImage("batman.png");
-  
     superman = loadImage("superman.png");
-  
     greenarrow = loadImage("GreenArrow.png");
-  
     hawkgirl = loadImage("hawkgirl.png");
-  
-
   }
   void display() {
-   if(spi){
-    image(spiderman,loc.x,loc.y,size,size);
-   }
-  else if(bat){
-    image(batman,loc.x,loc.y,size,size);
-   }
-  else if(sup){
-    image(superman,loc.x,loc.y,size,size);
-   }
-  else if(green){
-    image(greenarrow,loc.x,loc.y,size,size);
-   }
-  else if(hawk){
-    image(hawkgirl,loc.x,loc.y,size,size);
-   } 
+    if (spi) {
+      image(spiderman, loc.x, loc.y, size, size);
+    }
+    else if (bat) {
+      image(batman, loc.x, loc.y, size, size);
+    }
+    else if (sup) {
+      image(superman, loc.x, loc.y, size, size);
+    }
+    else if (green) {
+      image(greenarrow, loc.x, loc.y, size, size);
+    }
+    else if (hawk) {
+      image(hawkgirl, loc.x, loc.y, size, size);
+    }
   }
   void move() {
     if (keyPressed) {
@@ -65,6 +58,5 @@ class Ship {
       canshoot=true;
     }
   }
-
 }
 
