@@ -6,7 +6,7 @@ class GameOverScreen {
     villains = loadImage("Villains.jpg");
   }
 
-  void displayLose() {
+  void displayLose() {  //If your lives run out, the gameover screen appears
     background(0);
     colorMode(HSB, 360, 100, 100);
     rectMode(CORNER);
@@ -20,7 +20,7 @@ class GameOverScreen {
     textSize(30);
     text("You Lose", width/2, 100);
   }
-  void displayWin() {
+  void displayWin() {  //If you beat the game, the 'Congratulations' Screen appear
     pushMatrix();
     colorMode(HSB, 360, 100, 100);
     background(360);
