@@ -18,7 +18,7 @@ class CharScreen {
     loc5 = new PVector(300, 725);
     d=150;
   }
-  void display() { makes the five buttons display when the method is run
+  void display() { //makes the five buttons display when the method is run
     imageMode(CENTER); //alignes the image with the center and d is used as the height and width so they can be treated as circles to tell if the mouse is on the button
     image(spibutton, loc1.x, loc1.y, d, d);
     image(batbutton, loc2.x, loc2.y, d, d);
