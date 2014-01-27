@@ -5,11 +5,13 @@ class ShipBullets {
   boolean active;
   ShipBullets(float x, float y) {
     loc=new PVector(x, y);
-    vel=new PVector(0, -1); 
+    vel=new PVector(0, -10); 
     d= 10;
     active = true;
   }
   void shot() {
+    colorMode(RGB);
+    fill(255, 255, 255);
     ellipse(loc.x, loc.y, d, d);    
     loc.add(vel);
   }

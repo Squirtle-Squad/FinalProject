@@ -18,10 +18,10 @@ class Ship {
   void move() {
     if (keyPressed) {
       if (keyCode==LEFT) {
-        loc.x-=2;
+        loc.x-=10;
       }
       if (keyCode==RIGHT) {
-        loc.x+=2;
+        loc.x+=10;
       }
     }
   }

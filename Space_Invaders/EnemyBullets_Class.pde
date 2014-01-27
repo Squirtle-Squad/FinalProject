@@ -7,7 +7,7 @@ class EnemyBullets {
   boolean active; 
   EnemyBullets(float x, float y) { 
     loc=new PVector(x, y); 
-    vel=new PVector(0, 1); 
+    vel=new PVector(0, 10); 
     d= 20; 
     active=true;
   } 
