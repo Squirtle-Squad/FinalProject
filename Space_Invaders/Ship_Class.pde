@@ -3,13 +3,13 @@ class Ship {
   int size;
   boolean canshoot;
   int delay;
- // int lives;
+  // int lives;
   Ship(float x, float y) {
     loc=new PVector(x, y);
     size=50;
     canshoot= true;
     delay=0;
-   // lives=3;
+    // lives=3;
   }
   void display() {
     fill(0, 255, 0);
@@ -37,15 +37,15 @@ class Ship {
     }
   }
 
-/*  void check(ArrayList<EnemyBullets> ebullet) {
-    for (int i=0; i<aliens.size();i++) {
-      EnemyBullets eb= (EnemyBullets) ebullets.get(i);
-      if (dist(loc.x, loc.y, eb.loc.x, eb.loc.y)<=size/2+eb.d/2) {
-        ebullets.remove(i);
-        lives--;
-        loc.x=size/2;
-      }
-    }
-  }*/
+  /*  void check(ArrayList<EnemyBullets> ebullet) {
+   for (int i=0; i<aliens.size();i++) {
+   EnemyBullets eb= (EnemyBullets) ebullets.get(i);
+   if (dist(loc.x, loc.y, eb.loc.x, eb.loc.y)<=size/2+eb.d/2) {
+   ebullets.remove(i);
+   lives--;
+   loc.x=size/2;
+   }
+   }
+   }*/
 }
 
