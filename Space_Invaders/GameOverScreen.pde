@@ -35,8 +35,8 @@ class GameOverScreen {
     textAlign(CENTER);
     textSize(100);
     text("Congratulations!", width/2, height/6-50);
-    // fill(0, 75);
-    // text("Congratulations!", width/2-5, height/6-45);
+    fill(0, 75);
+    text("Congratulations!", width/2-5, height/6-45);
     fill(0);
     textSize(30);
     text("You have stopped the invasion!", width/2, height/6);
