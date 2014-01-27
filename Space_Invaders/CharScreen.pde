@@ -20,7 +20,7 @@ class CharScreen {
     image(spibutton, width/2, 125, 125, 85);
     image(supbutton, width/2, 400, 125, 100 );
     image(gabutton, width/2 + 10, 550, 115, 100);
-    image(habutton, width/2 + 10, 725, 100,125);
+    image(habutton, width/2 + 10, 725, 100, 125);
   }
 }
 

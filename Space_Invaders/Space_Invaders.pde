@@ -1,4 +1,3 @@
-
 boolean startState, charState, spiState, batState, superState, greenState, hawkState, gameState, levelState, endState;
 PImage grid;
 Start s;
@@ -24,8 +23,11 @@ ArrayList<EnemyBullets> ebullets=new ArrayList<EnemyBullets>();
 ArrayList<ShipBullets> sbullets=new ArrayList<ShipBullets>(); 
 Ship S; 
 
+GameOverScreen GO;
+
 void setup() {
   size(displayWidth, displayHeight);
+  colorMode(RGB);
   grid = loadImage("coolgrid.jpg");
   s = new Start();
   c1 = new CharScreen();
@@ -52,12 +54,14 @@ void setup() {
     }
   }
 
-  S=new Ship(width/2, height-50); 
+  S=new Ship(width/2, height-100); 
   for (int i=0;i<sbullets.size();) { 
     sbullets.add(new ShipBullets(S.loc.x, S.loc.y));
   }
   lives=5;
   score=0;
+
+  GO = new GameOverScreen();
 }
 
 void draw() {
@@ -113,7 +117,7 @@ void draw() {
   if (gameState==true) {
     background(0);
     currentTime=millis();
-    
+
     for (int i = 0; i < sbullets.size()-1; i++) { 
       ShipBullets bullet = (ShipBullets) sbullets.get(i); 
       bullet.shot(); 
@@ -170,6 +174,14 @@ void draw() {
     text("Score:"+score, 50, 50);
     fill(255, 0, 0);
     text("Lives:"+lives, 50, 75);
+  }
+  if (lives==0) {
+    GO.displayLose();
+    gameState=false;
+  }
+  if (score==23) {
+    GO.displayWin();
+    gameState=false;
   }
 }
 void button() {
