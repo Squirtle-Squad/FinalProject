@@ -247,6 +247,11 @@ void mousePressed() {
   }
   if (dist(mouseX, mouseY, loc.x, loc.y)<=d/2) {
     gameState=true;
+    spiState=false;
+    batState=false;
+    superState=false;
+    greenState=false;
+    hawkState=false;
     charState=false;
     startState=false;
     c1.loc=new PVector(-width, -height);
