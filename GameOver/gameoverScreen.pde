@@ -1,8 +1,7 @@
 class gameoverScreen {
-  PImage superHeroes, villains, MarvelBG;
+  PImage superHeroes, villains;
 
   gameoverScreen() {
-    MarvelBG = loadImage("MarvelComic.jpg");
     superHeroes = loadImage("Superheroes.jpg");
     villains = loadImage("Villains.jpg");
     colorMode(HSB, 360, 100, 100);
@@ -18,6 +17,9 @@ class gameoverScreen {
       rect(width, -5, -205, height+5);
       imageMode(CENTER);
       image(villains, width/2,height/2);
+      textMode(CENTER);
+      textSize(30);
+      text('You Lose', width/2, 100);
     }
     if ( enemies == 0) {
       pushMatrix();
