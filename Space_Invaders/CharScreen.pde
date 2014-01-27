@@ -2,7 +2,6 @@ class CharScreen {
   PImage batbutton, spibutton, gabutton, habutton, supbutton;
   PVector loc1, loc2, loc3, loc4, loc5;
   int d;
-  // int y, x;
   CharScreen() {
     imageMode(CENTER);
     batbutton = loadImage("batman logo.png"); 
@@ -19,8 +18,6 @@ class CharScreen {
     d=150;
   }
   void display() {
-    //  fill(30, 240, 240);
-    // ellipse(x, y, d, d);
     imageMode(CENTER);
     image(spibutton, loc1.x, loc1.y, d, d);
     image(batbutton, loc2.x, loc2.y, d, d);
