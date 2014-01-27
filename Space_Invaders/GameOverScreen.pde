@@ -17,8 +17,9 @@ class GameOverScreen {
     imageMode(CENTER);
     image(villains, width/2, height/2);
     textMode(CENTER);
-    textSize(30);
-    text("You Lose", width/2, 100);
+    fill(0, 0, 100);
+    textSize(100);
+    text("You Lose", width/2, 120);
   }
   void displayWin() {  //If you beat the game, the 'Congratulations' Screen appear
     pushMatrix();

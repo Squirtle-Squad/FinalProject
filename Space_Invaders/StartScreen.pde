@@ -6,7 +6,7 @@ class Start {
     textAlign(CENTER);
     fill(255);
     textSize(50);
-    text("The Space Invaders have returned\nIt is your job to defend the planet Earth\n...as a Superhero!\Use the arrow keys to move\nand the spacebar to shoot.", width/2, 200);
+    text("The Space Invaders have returned\nIt is your job to defend the planet Earth\n...as a Superhero!\nUse the arrow keys to move\nand the spacebar to shoot.", width/2, 200);
   }
   void button() { //makes a continue button appear when the method is run with a loation loc and diameter d
     colorMode(RGB);
