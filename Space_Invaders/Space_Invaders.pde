@@ -43,7 +43,7 @@ void setup() {
 
   startState=true; //code starts out displaying start screen
 
-  int(random(aliens.size())); 
+  int(random(aliens.size())); //Grid of enemies
   for (int x = 0; x < cols; x++) { 
     for (int y=0; y<rows;y++) { 
       aliens.add(new Enemies(70*x, 70*y));
@@ -143,19 +143,21 @@ S.green=true;
       for (int i=aliens.size()-1; i>0;i--) { 
         ebullets.add(new EnemyBullets(aliens.get(rand).loc.x, aliens.get(rand).loc.y));
       }
-    } 
-    for (int i = 0; i < ebullets.size()-1; i++) { 
+    }
+   // begin a new arrayList of EnemyBullets every time one hits the ship  
+    for (int i = 0; i < ebullets.size()-1; i++) {  
       if (ebullets.get(i).active==false) { 
         ebullets=new ArrayList<EnemyBullets>();
         lives--;
       }
-    } //DISPLAY AND MOVE ALL BULLETS IN BULLET ARRAYLIST
+    } //DISPLAY AND MOVE ALL ENEMYBULLETS IN BULLET ARRAYLIST
 
     for (EnemyBullets all: ebullets) { 
       all.display(); 
       all.shoot(); 
       all.check(S);
     } 
+    //ALL ENEMYBULLETS MOVE & BOUNCE TOGETHER AS A GRID
     for (Enemies a: aliens) { 
       if (a.loc.x + 50 > width || a.loc.x < 0) { 
         for (Enemies all: aliens) { 

@@ -15,6 +15,7 @@ class Enemies {
     archer =loadImage("black archer.png");
     shock=loadImage("aftershock.png");
   }
+  //DISPLAY WHICH ENEMY IMAGES BASED ON WHAT HERO IS CHOSEN
   void display(Ship s) {
     if (s.spi) {
       image(goblin, loc.x, loc.y, size, size);

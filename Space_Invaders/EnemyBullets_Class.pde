@@ -11,6 +11,7 @@ class EnemyBullets {
     d= 20; 
     active=true;
   } 
+  //ONLY SHOW THE ELLIPSE WHEN ENEMYBULLETS ARE ACTIVE
   void display() { 
     if (active) { 
       fill(255,0,0);
@@ -23,7 +24,7 @@ class EnemyBullets {
   void check(Ship s) { 
     if (dist(loc.x, loc.y, s.loc.x, s.loc.y)<=d/2+s.size/2) { 
       s.loc.x=s.size/2; 
-      active=false;
+      active=false; //IF ENEMYBULLET HITS SHIP THEN NOT ACTIVE
     }
   }
 }

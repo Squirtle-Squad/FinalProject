@@ -15,6 +15,7 @@ class ShipBullets {
     ellipse(loc.x, loc.y, d, d);    
     loc.add(vel);
   }
+  //REMOVE ENEMIES AND BECOME INACTIVE WHEN HIT AN ENEMY
   void check(ArrayList<Enemies> e) {
     for (int i = 0; i < e.size(); i++) {
       Enemies a = (Enemies) e.get(i);

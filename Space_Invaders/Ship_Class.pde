@@ -20,6 +20,7 @@ class Ship {
     greenarrow = loadImage("GreenArrow.png");
     hawkgirl = loadImage("hawkgirl.png");
   }
+  //DISPLAY WHICH HERO IMAGE DEPENDING ON WHICH CHARACTER IS CHOSEN
   void display() {
     if (spi) {
       image(spiderman, loc.x, loc.y, size, size);
